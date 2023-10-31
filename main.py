@@ -12,15 +12,12 @@ from aiogram import types
 import os
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from resize import format_img # Bu modulning vazifasi botga jo'natilgan rasmning razmerini 3x4 ga o'zgartirish
-import dotenv
 
 logging.basicConfig(level=logging.DEBUG)
 
-dotenv.load_dotenv()
-
 # Botning tokenlari olinadi
 # BOT_TOKEN deb yozilgan joyga bot tokeni qo'yiladi
-bot = Bot(os.getenv("Token",os.getenv('BOT_TOKEN')), parse_mode=types.ParseMode.HTML)
+bot = Bot(os.getenv("Token",'5488460281:AAFH9MwTogv-Wop03aMH8JsTRbnwvtQJtPc'), parse_mode=types.ParseMode.HTML)
 dp = Dispatcher(bot=bot, storage=MemoryStorage())
 
 # Botga start berilganda javob qaytaradi
